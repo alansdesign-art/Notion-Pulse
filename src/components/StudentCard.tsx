@@ -1,6 +1,6 @@
 "use client";
 
-import { IconAvatar, IconEmail, IconIdCard, IconBirthdayCake, IconEdit } from "@/components/icons";
+import { IconAvatar, IconEmail, IconIdCard, IconBirthdayCake, IconEditButton } from "@/components/icons";
 import { Badge } from "@/components/ui/badge";
 
 interface StudentData {
@@ -44,7 +44,7 @@ export function StudentCard({ student, onEdit }: StudentCardProps) {
             className="shrink-0 mt-1"
             aria-label="Editar aluno"
           >
-            <IconEdit />
+            <IconEditButton />
           </button>
         </div>
 
