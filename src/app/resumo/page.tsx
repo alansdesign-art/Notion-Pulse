@@ -78,9 +78,16 @@ function IconChevronRight() {
 function IconInvestment() {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 24l7-7 4 4 7-8 6 6" stroke="#66A4FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <circle cx="26" cy="26" r="5" fill="#66A4FF" opacity="0.2"/>
-      <path d="M26 24v2M25 26h2" stroke="#66A4FF" strokeWidth="1.2" strokeLinecap="round"/>
+      {/* bar chart — 3 colunas ascendentes */}
+      <rect x="2"  y="20" width="5" height="9" rx="1.2" fill="#66A4FF" opacity="0.6"/>
+      <rect x="9"  y="14" width="5" height="15" rx="1.2" fill="#66A4FF" opacity="0.8"/>
+      <rect x="16" y="8"  width="5" height="21" rx="1.2" fill="#66A4FF"/>
+      {/* linha de tendência */}
+      <path d="M4.5 21 9 16 14 19 20 10" stroke="#66A4FF" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
+      {/* moeda / dollar circle */}
+      <circle cx="25" cy="9" r="6.5" fill="white" stroke="#66A4FF" strokeWidth="1.5"/>
+      {/* símbolo $ */}
+      <path d="M25 5.5v9M22.8 7.5a2.2 2.2 0 0 1 4.4 0c0 1.2-1 1.8-2.2 2.1-1.2.3-2.2 1-2.2 2.1a2.2 2.2 0 0 0 4.4 0" stroke="#66A4FF" strokeWidth="1.2" strokeLinecap="round"/>
     </svg>
   );
 }
@@ -88,7 +95,7 @@ function IconInvestment() {
 function IconStar() {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 4l2.9 8.9H28l-7.6 5.5 2.9 8.9L16 21.8l-7.3 5.5 2.9-8.9L4 12.9h9.1L16 4z" stroke="#66A4FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M16 5l2.747 8.455H27.5l-7.124 5.178 2.748 8.456L16 21.91l-7.124 5.179 2.748-8.456L4.5 13.455H13.253L16 5z" stroke="#66A4FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 }
@@ -96,8 +103,9 @@ function IconStar() {
 function IconCoin() {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="16" cy="16" r="11" stroke="#66A4FF" strokeWidth="1.5"/>
-      <path d="M16 10v2M16 20v2M13 14c0-1.1.9-2 2-2h2a2 2 0 0 1 0 4h-2a2 2 0 0 0 0 4h2a2 2 0 0 0 2-2" stroke="#66A4FF" strokeWidth="1.2" strokeLinecap="round"/>
+      <circle cx="16" cy="16" r="11.25" stroke="#66A4FF" strokeWidth="1.5"/>
+      <path d="M16 9v14" stroke="#66A4FF" strokeWidth="1.3" strokeLinecap="round"/>
+      <path d="M12.5 12.5a3.5 3.5 0 0 1 7 0c0 1.9-1.56 2.9-3.5 3.3-1.94.4-3.5 1.4-3.5 3.3a3.5 3.5 0 0 0 7 0" stroke="#66A4FF" strokeWidth="1.3" strokeLinecap="round"/>
     </svg>
   );
 }
