@@ -48,10 +48,12 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 
   /* ── Famílias de fonte ────────────────────── */
-  --font-display: var(--font-margins), Georgia, serif;
-  --font-body:    var(--font-montserrat), system-ui, sans-serif;
-  --font-sans:    var(--font-montserrat), system-ui, sans-serif;
-  --font-mono:    ui-monospace, monospace;
+  --font-display:           var(--font-margem), Georgia, serif;
+  --font-display-condensed: var(--font-margem-condensed), Georgia, serif;
+  --font-display-narrow:    var(--font-margem-narrow), Georgia, serif;
+  --font-body:              var(--font-montserrat), system-ui, sans-serif;
+  --font-sans:              var(--font-montserrat), system-ui, sans-serif;
+  --font-mono:              ui-monospace, monospace;
 
   /* ── Escala de tamanhos (REM — base 16px) ─── */
   --text-display-1:   4rem;       /* 64px */
@@ -225,12 +227,20 @@
     line-height: var(--leading-body);
   }
 
+  /* ── Variantes de largura da MargemTest ──── */
+  .font-margem            { font-family: var(--font-display); }
+  .font-margem-condensed  { font-family: var(--font-display-condensed); }
+  .font-margem-narrow     { font-family: var(--font-display-narrow); }
+  .font-montserrat        { font-family: var(--font-body); }
+
   /* Pesos semânticos */
+  .font-thin       { font-weight: 100; }
   .font-light      { font-weight: var(--font-weight-light); }
   .font-regular    { font-weight: var(--font-weight-regular); }
   .font-medium     { font-weight: var(--font-weight-medium); }
   .font-bold       { font-weight: var(--font-weight-bold); }
   .font-extrabold  { font-weight: var(--font-weight-extrabold); }
+  .font-black      { font-weight: 900; }
 }
 
 @layer base {
