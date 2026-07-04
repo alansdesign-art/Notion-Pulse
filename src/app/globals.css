@@ -5,40 +5,40 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* ── Cores ────────────────────────────────── */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ── Radius ───────────────────────────────── */
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -46,6 +46,39 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* ── Famílias de fonte ────────────────────── */
+  --font-display: var(--font-margins), Georgia, serif;
+  --font-body:    var(--font-montserrat), system-ui, sans-serif;
+  --font-sans:    var(--font-montserrat), system-ui, sans-serif;
+  --font-mono:    ui-monospace, monospace;
+
+  /* ── Escala de tamanhos (REM — base 16px) ─── */
+  --text-display-1:   4rem;       /* 64px */
+  --text-display-2:   3.375rem;   /* 54px */
+  --text-display-3:   2.875rem;   /* 46px */
+  --text-highlight-1: 2.25rem;    /* 36px */
+  --text-highlight-2: 1.75rem;    /* 28px */
+  --text-headline-1:  1.5rem;     /* 24px */
+  --text-headline-2:  1.375rem;   /* 22px */
+  --text-headline-3:  1.25rem;    /* 20px */
+  --text-headline-4:  1.125rem;   /* 18px */
+  --text-body-1:      1.25rem;    /* 20px */
+  --text-body-2:      1.125rem;   /* 18px */
+  --text-body-3:      1rem;       /* 16px */
+  --text-body-4:      0.875rem;   /* 14px */
+
+  /* ── Pesos ───────────────────────────────── */
+  --font-weight-light:     300;
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+
+  /* ── Line-heights ────────────────────────── */
+  --leading-display: 1.05;
+  --leading-heading: 1.2;
+  --leading-body:    1.6;
 }
 
 :root {
@@ -117,14 +150,103 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* ── Utilitários de tipografia Gran Berry ─────── */
+@layer utilities {
+  /* Display — fonte Margins, uso em hero e banners */
+  .text-display-1 {
+    font-family: var(--font-display);
+    font-size: var(--text-display-1);
+    line-height: var(--leading-display);
+  }
+  .text-display-2 {
+    font-family: var(--font-display);
+    font-size: var(--text-display-2);
+    line-height: var(--leading-display);
+  }
+  .text-display-3 {
+    font-family: var(--font-display);
+    font-size: var(--text-display-3);
+    line-height: var(--leading-display);
+  }
+
+  /* Highlight — fonte Margins, seções e destaques */
+  .text-highlight-1 {
+    font-family: var(--font-display);
+    font-size: var(--text-highlight-1);
+    line-height: var(--leading-heading);
+  }
+  .text-highlight-2 {
+    font-family: var(--font-display);
+    font-size: var(--text-highlight-2);
+    line-height: var(--leading-heading);
+  }
+
+  /* Headline — fonte Margins, títulos de card/seção */
+  .text-headline-1 {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-1);
+    line-height: var(--leading-heading);
+  }
+  .text-headline-2 {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-2);
+    line-height: var(--leading-heading);
+  }
+  .text-headline-3 {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-3);
+    line-height: var(--leading-heading);
+  }
+  .text-headline-4 {
+    font-family: var(--font-display);
+    font-size: var(--text-headline-4);
+    line-height: var(--leading-heading);
+  }
+
+  /* Body — fonte Montserrat, texto corrido */
+  .text-body-1 {
+    font-family: var(--font-body);
+    font-size: var(--text-body-1);
+    line-height: var(--leading-body);
+  }
+  .text-body-2 {
+    font-family: var(--font-body);
+    font-size: var(--text-body-2);
+    line-height: var(--leading-body);
+  }
+  .text-body-3 {
+    font-family: var(--font-body);
+    font-size: var(--text-body-3);
+    line-height: var(--leading-body);
+  }
+  .text-body-4 {
+    font-family: var(--font-body);
+    font-size: var(--text-body-4);
+    line-height: var(--leading-body);
+  }
+
+  /* Pesos semânticos */
+  .font-light      { font-weight: var(--font-weight-light); }
+  .font-regular    { font-weight: var(--font-weight-regular); }
+  .font-medium     { font-weight: var(--font-weight-medium); }
+  .font-bold       { font-weight: var(--font-weight-bold); }
+  .font-extrabold  { font-weight: var(--font-weight-extrabold); }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
   }
   html {
-    @apply font-sans;
+    font-family: var(--font-body);
+  }
+
+  /* Headings usam Margins por padrão */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
   }
 }
