@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 // ── Ícones inline ──────────────────────────────────────────────────────────
 
@@ -206,8 +207,9 @@ function StudentInfoCard() {
 }
 
 function ContratosCard() {
+  const router = useRouter();
   return (
-    <button className="w-full bg-white border border-[#EBECF0] rounded-xl p-6 flex items-center gap-5 hover:bg-[#F4F5F7] transition-colors text-left">
+    <button onClick={() => router.push("/contratos")} className="w-full bg-white border border-[#EBECF0] rounded-xl p-6 flex items-center gap-5 hover:bg-[#F4F5F7] transition-colors text-left">
       <div className="flex items-center gap-2 flex-1 min-w-0">
         <span className="text-[#172B4D] text-[16px] font-medium leading-[1.25]" style={fm}>
           Contratos
