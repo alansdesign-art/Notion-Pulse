@@ -276,7 +276,7 @@ function SplitInfoCard({
 
 export default function ResumoAlunoPage() {
   return (
-    <div className="min-h-screen bg-[#FAFBFC] flex flex-col max-w-md mx-auto relative">
+    <div className="min-h-screen bg-[#FAFBFC] flex flex-col max-w-[460px] mx-auto relative">
       {/* Header */}
       <div className="bg-white border-b border-[#EBECF0] px-4 py-3 flex items-center gap-3">
         <button className="size-10 border border-[#0067FF] rounded-lg flex items-center justify-center shrink-0">
@@ -315,7 +315,7 @@ export default function ResumoAlunoPage() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md px-4 pb-6 pt-3 bg-white border-t border-[#EBECF0]">
+      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[460px] px-4 pb-6 pt-3 bg-white border-t border-[#EBECF0]">
         <button
           className="w-full h-10 bg-[#0067FF] hover:bg-[#0052CC] text-white text-[14px] rounded-lg transition-colors"
           style={fm}
