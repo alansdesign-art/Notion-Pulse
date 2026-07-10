@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 // ── Ícones inline ──────────────────────────────────────────────────────────
 
@@ -114,18 +113,12 @@ function StudentInfoCard() {
       {/* Avatar + nome + status */}
       <div className="flex gap-2 items-start">
         <div className="relative shrink-0 size-12">
-          <Image
-            src="/icons/avatar-aluno.png"
+          <img
+            src="/icons/avatar.svg"
             alt="Avatar do aluno"
-            fill
-            className="rounded-full object-cover"
-            unoptimized
+            width={48}
+            height={48}
           />
-          <div className="absolute bottom-0 right-0 bg-[#0067FF] rounded-full size-3 flex items-center justify-center">
-            <svg width="6" height="6" viewBox="0 0 6 6" fill="none">
-              <path d="M4.5 1L2 3.5l-1-1" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
         </div>
 
         <div className="flex flex-col gap-2 flex-1 min-w-0">
