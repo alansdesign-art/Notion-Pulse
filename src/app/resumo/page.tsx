@@ -315,7 +315,7 @@ export default function ResumoAlunoPage() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[460px] px-4 pb-6 pt-3 bg-white border-t border-[#EBECF0]">
+      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[460px] px-4 py-2 bg-white border-t border-[#EBECF0]">
         <button
           className="w-full h-10 bg-[#0067FF] hover:bg-[#0052CC] text-white text-[14px] rounded-lg transition-colors"
           style={fm}
