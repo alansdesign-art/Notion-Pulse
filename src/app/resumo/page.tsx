@@ -296,7 +296,7 @@ export default function ResumoAlunoPage() {
       </div>
 
       {/* Conteúdo */}
-      <div className="flex-1 overflow-y-auto px-4 py-[18px] pb-28 flex flex-col gap-6">
+      <div className="flex-1 px-4 py-[18px] pb-24 flex flex-col gap-2">
         <StudentInfoCard />
         <ContratosCard />
         <InfoCard
